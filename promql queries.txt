@@ -1,0 +1,16 @@
+Query 1
+100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
+Explanation:
+Gives approximate CPU utilization percentage.
+Query 2
+100 * (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes))
+Explanation:
+Gives memory utilization percentage.
+Query 3
+node_memory_MemTotal_bytes
+Explanation:
+Gives total system memory.
+Query 4
+node_memory_MemAvailable_bytes
+Explanation:
+Gives available system memory.
